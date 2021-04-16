@@ -1,0 +1,8 @@
+@mixin main-title-style {
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: $font-size-great;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}

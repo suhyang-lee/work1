@@ -1,0 +1,14 @@
+.contents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+
+  .main_contents {
+    width: $base-width;
+    margin-top: $spacing-40;
+  }
+}

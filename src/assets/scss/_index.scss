@@ -1,0 +1,14 @@
+// 공통 적용 스타일
+@import '@/assets/scss/common.scss';
+
+// scss/layout
+@import '@/assets/scss/layout/header.scss';
+@import '@/assets/scss/layout/contents.scss';
+@import '@/assets/scss/layout/footer.scss';
+
+// scss/components
+@import '@/assets/scss/components/carousel.scss';
+@import '@/assets/scss/components/information.scss';
+@import '@/assets/scss/components/news.scss';
+@import '@/assets/scss/components/gallery.scss';
+@import '@/assets/scss/components/sponsor.scss';

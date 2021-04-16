@@ -1,0 +1,52 @@
+// basic size
+$base-width: 1280px;
+$base-height: 40px;
+
+// color variables
+$base-color-white: #fff;
+$base-color-black: #000;
+$base-color-gray: #cccccc;
+$base-color-primary: #e5004f;
+
+// opacity variables
+$opacity-7: 0.7;
+$opacity-8: 0.8;
+
+// font size variables
+$font-size-basic: 1rem; //16px
+$font-size-small: 0.75rem; //12px
+$font-size-middle: 0.875em; //14px
+$font-size-large: 1.125rem; //18px
+$font-size-big: 1.25rem; //20px
+$font-size-vast: 1.875rem; //30px
+$font-size-great: 2.188rem; //35px
+
+// spacing
+$spacing-1: 1px;
+$spacing-2: 2px;
+$spacing-4: 4px;
+$spacing-8: 8px;
+$spacing-10: 10px;
+$spacing-12: 12px;
+$spacing-20: 20px;
+$spacing-40: 40px;
+
+// font-weight
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// border-styles
+$border-style: 1px solid $base-color-gray;
+
+// radius
+$radius-3: 3px;
+
+// z-index
+$z-index-2: 2;
+$z-index-3: 3;
+$z-index-4: 4;
+$z-index-5: 5;
