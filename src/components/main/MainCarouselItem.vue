@@ -10,7 +10,6 @@
         <button class="event_btn">프로모션 바로가기</button>
       </div>
     </div>
-    <p>dfsdfsdfsfd</p>
     <img :src="require(`@/assets/images${url}`)" alt="#" />
   </li>
 </template>
