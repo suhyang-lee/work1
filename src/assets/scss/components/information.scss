@@ -14,7 +14,6 @@
       position: relative;
       border-radius: $radius-3;
       overflow: hidden;
-      cursor: pointer;
 
       &:first-of-type {
         display: flex;
@@ -46,6 +45,11 @@
         img {
           z-index: $z-index-2;
         }
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        cursor: pointer;
       }
 
       &:nth-of-type(2) {
