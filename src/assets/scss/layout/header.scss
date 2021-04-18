@@ -4,6 +4,7 @@
   align-content: center;
   justify-content: center;
   border-bottom: $border-style;
+  position: relative;
 
   .header {
     display: flex;
@@ -12,10 +13,11 @@
     height: 85px;
 
     h1 {
-      width: 365px;
+      width: 359px;
     }
 
     .lnb {
+      position: relative;
       display: flex;
       height: inherit;
 
@@ -47,14 +49,56 @@
             border-right: 0;
             border-left: $border-style;
 
-            &:hover {
-              font-weight: 700;
-            }
-
             img {
               padding-right: $spacing-12;
             }
           }
+        }
+      }
+    }
+  }
+
+  .lnb_slide_menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    position: absolute;
+    top: 86px;
+    z-index: 99;
+    font-size: $font-size-middle;
+
+    .slide_menu {
+      display: flex;
+      width: 1280px;
+
+      span {
+        width: 359px;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 184px;
+        border-left: $border-style;
+        padding-top: 1rem;
+        box-sizing: border-box;
+
+        li {
+          text-align: center;
+          width: 100%;
+          height: 35px;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+
+        &:last-of-type {
+          border-right: $border-style;
         }
       }
     }
