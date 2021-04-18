@@ -21,6 +21,49 @@
       z-index: 0;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
+
+      .item_contents {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: $base-width;
+        position: absolute;
+        height: 50px;
+        z-index: 5;
+
+        .event {
+          display: flex;
+          flex-direction: column;
+          padding-right: 150px;
+          transform: scaleX(0.98);
+          color: $base-color-white;
+
+          p,
+          span {
+            font-family: 'a고딕17';
+            text-shadow: #000 0px 0px 40px;
+          }
+
+          p {
+            width: 290px;
+            font-size: 50px;
+            margin-bottom: 65px;
+          }
+
+          span {
+            font-size: 29.23px;
+            margin-bottom: 46px;
+            line-height: 45.23px;
+          }
+
+          button {
+            font-size: $font-size-large;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px 0;
+            border-radius: 3px;
+          }
+        }
+      }
     }
 
     .showing {
@@ -30,13 +73,13 @@
   }
 
   .carousel_control {
-    width: 1280px;
+    width: $base-width;
     height: 700px;
     display: flex;
     align-items: center;
     position: absolute;
     top: 0;
-    z-index: 99;
+    z-index: 5;
 
     button {
       transform: scaleY(1.8);
