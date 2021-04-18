@@ -1,42 +1,57 @@
 <template>
-  <section class="main_carousel">
-    <Hooper :settings="hooperSettings" style="height: 700px">
-      <Slide
-        v-for="(event, index) in eventList"
-        v-bind:key="index"
-        :index="index"
-      >
-        <div class="slide_image">
-          <img :src="require(`@/assets/images${event.url}`)" alt="#" />
-        </div>
-      </Slide>
-      <hooper-navigation slot="hooper-addons"></hooper-navigation>
-    </Hooper>
+  <section class="main_carousel" @mouseover="onStop" @mouseout="onPlay">
+    <ul class="carousel">
+      <MainCarouselItem
+        v-for="(event, idx) in eventList"
+        v-bind:key="event.id"
+        v-bind:url="event.url"
+        v-bind:idx="idx"
+        v-bind:currentIdx="currentIdx"
+      />
+    </ul>
+    <div class="carousel_control">
+      <button class="prev" @click="onPrevSlide">&#60;</button>
+      <button class="next" @click="onNextSlide">&#62;</button>
+    </div>
   </section>
 </template>
 
 <script>
 import Data from '@/assets/mock/data';
-
-import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper';
-import 'hooper/dist/hooper.css';
+import MainCarouselItem from '@/components/main/MainCarouselItem';
 
 export default {
   name: 'MainCarousel',
-  components: { Hooper, Slide, HooperNavigation },
+  components: { MainCarouselItem },
 
   data: function() {
     return {
       eventList: Data.event,
-      hooperSettings: {
-        progress: true,
-        centerMode: false,
-        itemsToSlide: 1,
-        autoPlay: true,
-        playSpeed: 3000,
-        transition: 300,
-      },
+      currentIdx: 0,
+      timer: null,
     };
+  },
+
+  mounted: function() {
+    this.onPlay();
+  },
+
+  methods: {
+    onPlay: function() {
+      this.timer = setInterval(this.onNextSlide, 2000);
+    },
+    onStop: function() {
+      clearTimeout(this.timer);
+      this.timer = null;
+    },
+    onPrevSlide: function() {
+      this.currentIdx -= 1;
+      if (this.currentIdx < -1) this.currentIdx = this.eventList.length - 1;
+    },
+    onNextSlide: function() {
+      this.currentIdx += 1;
+      if (this.currentIdx > this.eventList.length - 1) this.currentIdx = 0;
+    },
   },
 };
 </script>

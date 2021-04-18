@@ -1,5 +1,5 @@
 <template>
-  <li v-show="visibleSlide === index">
+  <li :class="{ showing: idx === currentIdx }">
     <img :src="require(`@/assets/images${url}`)" alt="#" />
   </li>
 </template>
@@ -9,7 +9,8 @@ export default {
   name: 'MainCarouselItem',
   props: {
     url: String,
-    index: Number,
+    idx: Number,
+    currentIdx: Number,
   },
 };
 </script>
